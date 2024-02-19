@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-md bg-body-tertiary fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img class="img-fluid" style="max-width: 50px;"
+        src="/assets/main logo/car-logo-clip-art-png-16.png"
+        alt=""
+        routerLink="/home"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img class="img-fluid" style="max-width: 50px;"
+            src="/assets/main logo/car-logo-clip-art-png-16.png"
+            alt=""
+            routerLink="/home"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <!-- navbar body -->
+        <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+          <ul class="navbar-nav  justify-content-center align-items-center fs-6 flex-grow-1 pe-3">
+            <li class="nav-item mx-2">
+                <a class="nav-link active" aria-current="page" routerLink="/main">Home</a>
+            </li>
+            <li class="nav-item mx-2">
+                <a class="nav-link active" aria-current="page" routerLink="/main">About</a>
+            </li>
+            <li class="nav-item mx-2">
+                <a class="nav-link active" aria-current="page" routerLink="/main">Vehicle Models</a>
+            </li>
+            <li class="nav-item mx-2">
+                <a class="nav-link active" aria-current="page" routerLink="/main">Testimonials</a>
+            </li>
+            <li class="nav-item mx-2">
+                <a class="nav-link active" aria-current="page" routerLink="/main">Our Team</a>
+            </li>
+            <li class="nav-item mx-2">
+                <a class="nav-link active" aria-current="page" routerLink="/main">Contact</a>
+            </li>
+          </ul>
+          <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3 fs-6">
+            <a class="text-white text-decoration-none px-3 py-1" routerLink="/signIn">{{"Login"}}</a>
+            <a class="text-white text-decoration-none px-3 py-1 bg-success rounded-4" routerLink="/registration">Registration</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
