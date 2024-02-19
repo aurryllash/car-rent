@@ -24,3 +24,32 @@
     background-color: #fff;
     color: black;
 }
+
+/* section 3 */
+.section-3 img {
+    max-width: 100px;
+    margin-top: 40px;
+}
+.section-3 h2 {
+    font-weight: 700;
+    margin-top: 15px;
+}
+.section-3 p {
+    font-weight: 700;
+    color: grey;
+    margin-top: 15px;
+    width: 300px;
+}
+.section-3 .col-ms-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+.section-3 .col-ms-12:hover {
+    background-color: rgb(204, 204, 204);
+
+}
