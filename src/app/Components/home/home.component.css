@@ -92,3 +92,17 @@
 .section-4 .col-ms-12 {
     margin-top: 40px;
 }
+/* section 6 */
+/* .section-6 .col-ms-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.section-6 .second-column p {
+    /* width: 300px; */
+    color: grey;
+    font-weight: 700;
+}
+.section-6 .second-column h3 {
+    font-weight: 800;
+}
