@@ -1,45 +1,45 @@
-<div class="container">
-    <section class="section-1" style="margin-top: 400px; margin-bottom: 400px;">
+<div>
+    <section class="section-1 container" style="margin-top: 400px; margin-bottom: 400px;">
         <div class="container">
             <div class="row">
               <div class="col">
-                <div class="content">
+                <div class="content text-center text-xxl-start ">
                     <h3 class="display-6" style="font-weight: 800;">Plan your trip now</h3>
                     <h1 class="display-4" style="font-weight: 800;">Save <span style="color: rgb(65, 197, 65);">big</span> with our car rental</h1>
                     <p style="color: grey; font-weight: 700;">Rent the car of your dreams. Unbeatable prices, unlimited miles, flexible pick-up options and much more.</p>
                     <div class="buttons">
                         <button class="btn-1 text-white">Book Ride</button>
-                        <button class="btn-2">Learn More</button>
+                        <button class="btn-2 mt-2">Learn More</button>
                     </div>
                 </div>
               </div>
-              <div class="col">
-                <div class="content">
-                    <img class="d-none d-md-block" src="/assets/images/car-vehicle-color6.png" style="width: 700px;" alt="">
+              <div class="col d-none d-xl-block ">
+                <div class="content text-center ">
+                    <img  src="/assets/images/car-vehicle-color6.png" style="width: 700px;" alt="">
                 </div>
               </div>
             </div>
           </div>
     </section>
 
-    <section class="section-3" style="margin-bottom: 400px;">
+    <section class="section-3 container" style="margin-bottom: 400px;">
         <div class="titles d-flex justify-content-center align-items-center flex-column" >
             <h3 class="display-6" style="font-weight: 700;">Plan your trip now</h3>
             <h1 class="display-4" style="font-weight: 800;">Quick & easy car rental</h1>
         </div>
         <div class="container text-center" style="margin-top: 40px;">
             <div class="row">
-              <div class="col-ms-12 col-md-4">
+              <div class="col-ms-12 col-md-12 col-lg-4">
                 <img src="/assets/iconsForSec3/car-insurance.png" alt="">
                 <h2>Select Car</h2>
                 <p>We offers a big range of vehicles for all your driving needs. We have the perfect car to meet your needs</p>
               </div>
-              <div class="col-ms-12 col-md-4">
+              <div class="col-ms-12 col-md-12 col-lg-4">
                 <img src="/assets/iconsForSec3/communication.png" alt="">
                 <h2>Contact Operator</h2>
                 <p>Our knowledgeable and friendly operators are always ready to help with any questions or concerns</p>
               </div>
-              <div class="col-ms-12 col-md-4">
+              <div class="col-ms-12 col-md-12 col-lg-4">
                 <img src="/assets/iconsForSec3/car-rental.png" alt="">
                 <h2>Let's Drive</h2>
                 <p>Whether you're hitting the open road, we've got you covered with our wide range of cars</p>
@@ -48,7 +48,7 @@
           </div>
     </section>
 
-    <section class="section-4" style="margin-bottom: 400px;">
+    <section class="section-4 container" style="margin-bottom: 400px;">
       <div class="content text-center">
         <h3 class="display-8" style="font-weight: 700;">Vehicle Models</h3>
         <h1 class="display-4" style="font-weight: 800;">Our rental fleet</h1>
@@ -75,7 +75,7 @@
             <div style="background-color: rgb(65, 197, 65);" class="p-2 d-flex justify-content-end ">
                 <span style="width: 200px; font-size: 20px; font-weight: 800; color: white;" >${{ selectedCar.rentPerDay }} / Rent Per Day</span>
             </div>
-            <tbody class="">
+            <tbody>
               <tr>
                 <td>Make</td>
                 <td>{{ selectedCar.make }}</td>
@@ -99,5 +99,12 @@
         </div>
       </div>
     </div>
+    </section>
+
+    <section class="section-5 bg-dark container-fluid " style="margin-bottom: 400px;">
+      <div class="bg-dark text-white text-center   d-flex justify-content-center  align-items-center flex-column" style="padding: 50px 20px;">
+        <h1 class="display-3" style="font-weight: 800;">Save big with our cheap car rental!</h1>
+        <h3 class="display-6" style="font-weight: 700;">Top Airports. Local Suppliers. <span style="color: rgb(65, 197, 65);">24/7</span> Support.</h3>
+      </div>
     </section>
 </div>

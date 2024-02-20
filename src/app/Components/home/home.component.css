@@ -5,6 +5,8 @@
     background-color: rgb(65, 197, 65); 
     font-weight: 700;
     border-radius: 10px;
+    width: 150px;
+    margin-right: 10px;
     transition: box-shadow 0.3s;
 }
 .btn-1:hover {
@@ -16,8 +18,8 @@
     background-color: black; 
     font-weight: 700;
     color: white;
-    margin-left: 10px;
     border-radius: 10px;
+    width: 150px;
     transition: background-color 0.3s;
 }
 .btn-2:hover {
