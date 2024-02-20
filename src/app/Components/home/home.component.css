@@ -51,5 +51,42 @@
 }
 .section-3 .col-ms-12:hover {
     background-color: rgb(204, 204, 204);
+}
 
+/* section 4 */
+
+.section-4 .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.section-4 p {
+    width: 450px;
+}
+.section-4 .container-4 {
+
+
+    padding: 10px 0;
+    background-color: rgb(225, 225, 225);
+    margin-top: 10px;
+
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+.section-4 .container-4:hover {
+    background-color: rgb(65, 197, 65);
+    color: white;
+}
+.section-4 table td{
+    font-weight: 700;
+    font-size: 15px;
+    width: 50%;
+}
+.section-4 .container-4.selected {
+    background-color: rgb(65, 197, 65);
+    color: white;
+}
+.section-4 .col-ms-12 {
+    margin-top: 40px;
 }
