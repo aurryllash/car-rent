@@ -114,3 +114,31 @@
     box-shadow: 7px 10px 10px rgba(128, 128, 128, 0.086);
     height: 40rem;
 }
+
+/* section 8 */
+.section-8 p {
+    color: grey;
+    font-weight: 400;
+}
+
+.accordion-item.show {
+    background-color: rgb(65, 197, 65); /* Change this to the desired background color */
+}
+
+.accordion-item {
+    border: none;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.131);
+}
+
+/* Change the color of the border of the opened accordion item */
+.accordion-button:not(.collapsed) {
+    background-color: rgb(65, 197, 65);; /* Change this to the desired border color */
+    color: white;
+    
+}
+.accordion-button {
+    padding: 30px 20px;
+}
+.accordion-button:focus {
+    box-shadow: none !important;
+}
