@@ -27,6 +27,42 @@
     color: black;
 }
 
+/* section 2 */
+.form-select-box {
+    font-weight: 600;
+    color: rgba(128, 128, 128, 0.573);
+    border: 2px solid rgba(128, 128, 128, 0.573);
+    padding: 5px;
+    max-width: 360px;
+}
+.form-select-box:focus {
+    box-shadow: none;
+    border: 2px solid rgba(128, 128, 128, 0.573);
+    outline: none;
+}
+.section-2 .col-lg-4 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.section-2 .reserve-btn {
+    border: none;
+    background-color: rgb(65, 197, 65);
+    color: white;
+    font-weight: 600;
+    padding: 5px;
+    border: 2px solid rgb(65, 197, 65);
+    box-shadow: 5px 10px 10px rgba(32, 98, 32, 0.276);
+    max-width: 360px;
+}
+.section-2 .col-lg-4 select {
+    margin-top: 10px;
+}
+.section-2 .col-lg-4 span {
+    margin-top: 20px;
+}
+
+
 /* section 3 */
 .section-3 img {
     max-width: 100px;
