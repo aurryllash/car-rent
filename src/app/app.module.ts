@@ -8,6 +8,7 @@ import { HomeComponent } from './Components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PopUpreserveComponent } from './Popups/pop-upreserve/pop-upreserve.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PopUpreserveComponent } from './Popups/pop-upreserve/pop-upreserve.comp
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule
   ],
   providers: [
     provideClientHydration()

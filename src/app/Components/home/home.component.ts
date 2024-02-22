@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MainService } from '../../Services/main.service';
 import { Car } from '../../Interfaces/product';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { PopUpreserveComponent } from '../../Popups/pop-upreserve/pop-upreserve.component';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +17,7 @@ export class HomeComponent implements OnInit{
   locations: string[] = ['Tbilisi', 'Batumi', 'Telavi', 'Gori', 'Kutaisi', 'Akhaltsikhe', 'Kobuleti', 'Rustavi'];
   showErrorMessage: boolean = false;
 
-  constructor(private main: MainService, private fb: FormBuilder) {}
+  constructor(private main: MainService, private fb: FormBuilder, public dialog: MatDialog) {}
 
   carFormGroup: FormGroup = this.fb.group({
     carType: ['', Validators.required],
@@ -36,12 +38,26 @@ export class HomeComponent implements OnInit{
     this.selectedCar = car;
   }
 
-  OnSubmit() {
+  
+
+  OnSubmit(): void {
     if(this.carFormGroup.invalid) {
       this.showErrorMessage = true
     } else {
       this.showErrorMessage = false
     }
+  
+    const dialogref = this.dialog.open(PopUpreserveComponent, {
+      // enterAnimationDuration: '500ms',
+      // exitAnimationDuration: '500ms',
+      width: '1000px',
+      data: {
+        carData: this.carFormGroup.value,
+      }
+    });
+    dialogref.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 
 }

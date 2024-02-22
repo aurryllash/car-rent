@@ -1,1 +1,45 @@
-<p>pop-upreserve works!</p>
+
+    <h2 class="text-white " style="background-color: rgb(65, 197, 65); padding: 20px;">COMPLETE RESERVATION</h2>
+    <div style="background-color: rgba(65, 197, 65, 0.077); padding: 20px;">
+        <h4 style="color: rgb(65, 197, 65);"> Upon completing this reservation enquiry, you will receive:</h4>
+        <p style="color: grey; font-weight: 600;">Your rental voucher to produce on arrival at the rental desk and a toll-free customer support number.</p>
+    </div>
+    <section class="section-1">
+        <div class="container " style="margin-top: 20px; padding: 20px;">
+            <div class="row">
+                <div class="col">
+                    <h4 style="color: rgb(65, 197, 65);">Location & Date</h4>
+                    <div class="container" style="margin-top: 20px;">
+                    <div class="col">
+                      <div class="row">
+                        <h5>Pick-Up Date & Time</h5>
+                        <p>{{ car.pickUpDate }}</p>
+                      </div>
+                      <div class="row">
+                        <h5>Drop-Off Date & Time</h5>
+                        <p>{{ car.dropOfDate }}</p>
+                      </div>
+                      <div class="row">
+                        <h5>Pick-Up Location</h5>
+                        <p>{{ car.pickUpLoc }}</p>
+                      </div>
+                      <div class="row">
+                        <h5>Drop-Off Location</h5>
+                        <p>{{ car.dropOfLoc }}</p>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>Car - <span style="color: rgb(65, 197, 65);">{{ car.carType }}</span></h4>
+                    <div style="margin-top: 20px;">
+                        <img src="{{ carImg }}" height="200px" alt="">
+                    </div>
+                </div>
+            </div>
+          </div>
+    </section>
+    <hr width="100%">
+    <section class="section-2" style="padding: 20px;">
+        title
+    </section>
