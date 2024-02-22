@@ -7,12 +7,14 @@ import { HeaderComponent } from './Components/header/header.component';
 import { HomeComponent } from './Components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PopUpreserveComponent } from './Popups/pop-upreserve/pop-upreserve.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    PopUpreserveComponent
   ],
   imports: [
     BrowserModule,

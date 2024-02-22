@@ -61,11 +61,18 @@
 .section-2 .col-lg-4 input {
     margin-top: 10px;
 }
-.section-2 .col-lg-4 span {
-    margin-top: 20px;
-}
 .section-2 .col-lg-4 label {
     margin-top: 20px;
+}
+.section-2 .error-message {
+    background-color: rgba(189, 81, 81, 0.471); 
+    color: rgb(182, 56, 56); 
+    padding: 20px; 
+    font-weight: 700;
+    font-size: 17px;
+    margin-top: 20px;
+    margin-right: 40px;
+    border-radius: 5px;
 }
 
 
@@ -135,13 +142,7 @@
     margin-top: 40px;
 }
 /* section 6 */
-/* .section-6 .col-ms-12 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 .section-6 .second-column p {
-    /* width: 300px; */
     color: grey;
     font-weight: 700;
 }
@@ -157,7 +158,7 @@
     height: 40rem;
 }
 .section-7 p {
-    
+
 }
 
 /* section 8 */
@@ -167,7 +168,7 @@
 }
 
 .accordion-item.show {
-    background-color: rgb(65, 197, 65); /* Change this to the desired background color */
+    background-color: rgb(65, 197, 65);
 }
 
 .accordion-item {
@@ -175,9 +176,9 @@
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.131);
 }
 
-/* Change the color of the border of the opened accordion item */
+
 .accordion-button:not(.collapsed) {
-    background-color: rgb(65, 197, 65);; /* Change this to the desired border color */
+    background-color: rgb(65, 197, 65);
     color: white;
     
 }

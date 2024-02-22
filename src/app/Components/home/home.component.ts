@@ -12,7 +12,8 @@ export class HomeComponent implements OnInit{
 
   cars: Car[] = [];
   selectedCar!: Car;
-  locations: string[] = ['Tbilisi', 'Batumi', 'Telavi', 'Gori', 'Kutaisi', 'Akhaltsikhe', 'Kobuleti', 'Rustavi']
+  locations: string[] = ['Tbilisi', 'Batumi', 'Telavi', 'Gori', 'Kutaisi', 'Akhaltsikhe', 'Kobuleti', 'Rustavi'];
+  showErrorMessage: boolean = false;
 
   constructor(private main: MainService, private fb: FormBuilder) {}
 
@@ -36,7 +37,11 @@ export class HomeComponent implements OnInit{
   }
 
   OnSubmit() {
-    console.log(this.carFormGroup.value)
+    if(this.carFormGroup.invalid) {
+      this.showErrorMessage = true
+    } else {
+      this.showErrorMessage = false
+    }
   }
 
 }

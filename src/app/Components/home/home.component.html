@@ -62,10 +62,14 @@
                 <label class="text-start" style="font-weight: 700; font-size: 16px;" for="Drop-of">Drop-of *</label>
                 <input class="form-select-box" formControlName="dropOfDate" type="date" id="Drop-of" >
               </div>
-              <div class="col-lg-4 text-center ">
+              <div class="col-lg-4 text-center">
                 <span class="text-start" style="font-weight: 700; font-size: 16px;"></span>
-                <button class="reserve-btn" type="button" (click)="OnSubmit()">Reserve</button>
+                <button class="reserve-btn mt-4 mt-lg-1" type="submit" >Reserve</button>
               </div>
+            </div>
+            <div class="error-message d-flex justify-content-between align-items-center " *ngIf="showErrorMessage">
+              All fields required!
+              <img src="/assets/close.png" width="20px" style="opacity: 60%; cursor: pointer;" (click)="showErrorMessage = false" alt="">
             </div>
           </form>
         </div>
