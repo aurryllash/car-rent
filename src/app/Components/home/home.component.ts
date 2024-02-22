@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MainService } from '../../Services/main.service';
 import { Car } from '../../Interfaces/product';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -11,8 +12,17 @@ export class HomeComponent implements OnInit{
 
   cars: Car[] = [];
   selectedCar!: Car;
+  locations: string[] = ['Tbilisi', 'Batumi', 'Telavi', 'Gori', 'Kutaisi', 'Akhaltsikhe', 'Kobuleti', 'Rustavi']
 
-  constructor(private main: MainService) {}
+  constructor(private main: MainService, private fb: FormBuilder) {}
+
+  carFormGroup: FormGroup = this.fb.group({
+    carType: ['', Validators.required],
+    pickUpLoc: ['', Validators.required],
+    dropOfLoc: ['', Validators.required],
+    pickUpDate: ['', Validators.required],
+    dropOfDate: ['', Validators.required]
+  })
 
   ngOnInit(): void {
     this.main.getAllCar().subscribe(response => {
@@ -23,6 +33,10 @@ export class HomeComponent implements OnInit{
 
   selectCar(car: Car) {
     this.selectedCar = car;
+  }
+
+  OnSubmit() {
+    console.log(this.carFormGroup.value)
   }
 
 }

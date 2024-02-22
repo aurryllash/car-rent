@@ -1,9 +1,9 @@
-<div>
+
     <section class="section-1 container" style="margin-top: 400px; margin-bottom: 400px;">
         <div class="container">
             <div class="row">
               <div class="col">
-                <div class="content text-center text-xxl-start ">
+                <div class="content text-center text-xxl-start">
                     <h3 class="display-6" style="font-weight: 800;">Plan your trip now</h3>
                     <h1 class="display-4" style="font-weight: 800;">Save <span style="color: rgb(65, 197, 65);">big</span> with our car rental</h1>
                     <p style="color: grey; font-weight: 700;">Rent the car of your dreams. Unbeatable prices, unlimited miles, flexible pick-up options and much more.</p>
@@ -24,63 +24,47 @@
 
     <section class="section-2 container" style="margin-bottom: 200px;">
       
-      <div style="padding: 40px 60px; padding-bottom: 60px; box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.179);">
+      <div style="padding: 40px 0 60px 40px; box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.179);">
         <div class="content">
           <h3 style="font-weight: 700;">Book a Car</h3>
         </div>
-        <div class="">
-          <form>
+        <div>
+          <form [formGroup]="carFormGroup" (ngSubmit)="OnSubmit()">
             <div class="row">
               <div class="col-lg-4">
-                <span class="text-start" style="font-weight: 700; font-size: 16px;">Email address</span>
-                <select class="form-select-box" >
-                  <option selected>Select Your Car Type</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                <label class="text-start" style="font-weight: 700; font-size: 16px;" for="carType">Select Your Car Type *</label>
+                <select class="form-select-box" formControlName="carType" id="carType">
+                  <option value="" selected>Select Your Car Type</option>
+                  <option value="{{ car.model }}"  *ngFor="let car of cars">{{ car.model }}</option>
                 </select>
               </div>
               <div class="col-lg-4">
-                <span class="text-start" style="font-weight: 700; font-size: 16px;">Email address</span>
-                <select class="form-select-box" >
-                  <option selected>Select Your Car Type</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                <label class="text-start" style="font-weight: 700; font-size: 16px;" for="DropOf">Pick-up *</label>
+                <select class="form-select-box" formControlName="pickUpLoc">
+                  <option value="" selected>Select Pick Up Location</option>
+                  <option value="{{ location }}" *ngFor="let location of locations">{{ location }}</option>
                 </select>
               </div>
               <div class="col-lg-4">
-                <span class="text-start" style="font-weight: 700; font-size: 16px;">Email address</span>
-                <select class="form-select-box" >
-                  <option selected>Select Your Car Type</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                  <label class="text-start" style="font-weight: 700; font-size: 16px;" for="DropOf">Drop-of *</label>
+                <select class="form-select-box" formControlName="dropOfLoc" id="DropOf">
+                  <option value="" selected>Select Drop Off Location</option>
+                  <option value="{{ location }}" *ngFor="let location of locations">{{ location }}</option>
                 </select>
               </div>
             </div>
             <div class="row">
               <div class="col-lg-4">
-                <span class="text-start" style="font-weight: 700; font-size: 16px;">Email address</span>
-                <select class="form-select-box" >
-                  <option selected>Select Your Car Type</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
+                <label class="text-start" style="font-weight: 700; font-size: 16px;" for="pick-up">Pick-up *</label>
+                <input class="form-select-box" formControlName="pickUpDate" type="date" id="pick-up">
               </div>
               <div class="col-lg-4">
-                <span class="text-start" style="font-weight: 700; font-size: 16px;">Email address</span>
-                <select class="form-select-box" >
-                  <option selected>Select Your Car Type</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
+                <label class="text-start" style="font-weight: 700; font-size: 16px;" for="Drop-of">Drop-of *</label>
+                <input class="form-select-box" formControlName="dropOfDate" type="date" id="Drop-of" >
               </div>
               <div class="col-lg-4 text-center ">
                 <span class="text-start" style="font-weight: 700; font-size: 16px;"></span>
-                <button class="reserve-btn">Reserve</button>
+                <button class="reserve-btn" type="button" (click)="OnSubmit()">Reserve</button>
               </div>
             </div>
           </form>
@@ -169,7 +153,7 @@
     </section>
 
     <section class="section-5 bg-dark container-fluid" style="margin-bottom: 200px;" >
-      <div class="bg-dark text-white text-center   d-flex justify-content-center  align-items-center flex-column" style="padding: 50px 20px;">
+      <div class="bg-dark text-white text-center d-flex justify-content-center  align-items-center flex-column" style="padding: 50px 20px;">
         <h1 class="display-3" style="font-weight: 800;">Save big with our cheap car rental!</h1>
         <h3 class="display-6" style="font-weight: 700;">Top Airports. Local Suppliers. <span style="color: rgb(65, 197, 65);">24/7</span> Support.</h3>
       </div>
@@ -190,8 +174,7 @@
             <button class="btn-1 text-white" style="font-weight: 700; font-size: 15px;">Find Details</button>
             </div> 
           </div>
-          <div class="col-ms-12 col-md-12 col-lg-6 mt-md-5 mt-sm-5 mt-lg-0">
-            
+          <div class="col-ms-12 col-md-12 col-lg-6 mt-md-5 mt-sm-5 mt-lg-0">  
             <div class="container text-center text-lg-start second-column">
               <div class="row">
                 <div class="col-ms-12 col-md-12 col-lg-12 flex-ms-column flex-md-column flex-lg-row">
@@ -228,7 +211,7 @@
       <div class="content text-center d-flex justify-content-center  align-items-center flex-column">
         <h3 style="font-weight: 700;">Reviewed by People</h3>
         <h1 class="display-4" style="font-weight: 800;">Client's Testimonials</h1>
-        <p class="" style="color: grey; font-weight: 700; width: 600px; margin-top: 20px;">Discover the positive impact we've made on the our clients by reading through their testimonials. Our clients have experienced our service and results, and they're eager to share their positive experiences with you.</p>
+        <p class="pForsec8" style="color: grey; font-weight: 700; max-width: 600px; margin-top: 20px;">Discover the positive impact we've made on the our clients by reading through their testimonials. Our clients have experienced our service and results, and they're eager to share their positive experiences with you.</p>
       </div>
 
     <div class="container text-center mt-5">
@@ -265,7 +248,7 @@
       <div class="content text-center d-flex justify-content-center  align-items-center flex-column">
         <h3 style="font-weight: 700;">FAQ</h3>
         <h1 class="display-4" style="font-weight: 800;">Frequently Asked Questions</h1>
-        <p class="" style="color: grey; font-weight: 700; width: 600px; margin-top: 20px;">Frequently Asked Questions About the Car Rental Booking Process on Our Website: Answers to Common Concerns and Inquiries.</p>
+        <p class="" style="color: grey; font-weight: 700; max-width: 600px; margin-top: 20px;">Frequently Asked Questions About the Car Rental Booking Process on Our Website: Answers to Common Concerns and Inquiries.</p>
     </div>
     <div class="d-flex justify-content-center align-items-center" style="margin-top: 40px;">
       <div class="content" style="width: 40rem;" >
@@ -311,4 +294,4 @@
     </div>
     
     </section>
-</div>
+

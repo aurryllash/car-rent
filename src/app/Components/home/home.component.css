@@ -58,7 +58,13 @@
 .section-2 .col-lg-4 select {
     margin-top: 10px;
 }
+.section-2 .col-lg-4 input {
+    margin-top: 10px;
+}
 .section-2 .col-lg-4 span {
+    margin-top: 20px;
+}
+.section-2 .col-lg-4 label {
     margin-top: 20px;
 }
 
@@ -100,7 +106,7 @@
     flex-direction: column;
 }
 .section-4 p {
-    width: 450px;
+    max-width: 450px;
 }
 .section-4 .container-4 {
 
@@ -149,6 +155,9 @@
     padding: 40px 20px;
     box-shadow: 7px 10px 10px rgba(128, 128, 128, 0.086);
     height: 40rem;
+}
+.section-7 p {
+    
 }
 
 /* section 8 */
