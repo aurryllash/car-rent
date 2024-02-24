@@ -1,6 +1,58 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
 .cover-img {
+    background-image: url('/assets/Covers/pexels-mike-bird-136872.jpg');
     background-size: cover;
-    background-position: bottom;
-    opacity: 50%;
-    padding-top: 40px;
+    background-position: center;
+    height: 400px;
+}
+.home-title {
+    color: black;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+.home-title:hover {
+    color: rgb(65, 197, 65);
+}
+
+/* section 2 */
+.section-2 .inner-col img {
+    width: 70px;
+}
+.section-2 .inner-col p {
+    font-size: 30px;
+    color: grey;
+}
+
+
+
+/* section 3 */
+.section-3 img {
+    max-width: 100px;
+    margin-top: 40px;
+}
+.section-3 h2 {
+    font-weight: 700;
+    margin-top: 15px;
+}
+.section-3 p {
+    font-weight: 700;
+    color: grey;
+    margin-top: 15px;
+    width: 300px;
+}
+.section-3 .col-ms-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+.section-3 .col-ms-12:hover {
+    background-color: rgb(204, 204, 204);
 }
