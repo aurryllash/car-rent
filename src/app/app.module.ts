@@ -9,13 +9,23 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PopUpreserveComponent } from './Popups/pop-upreserve/pop-upreserve.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { AboutComponent } from './Components/about/about.component';
+import { ModelsComponent } from './Components/models/models.component';
+import { TestimonialsComponent } from './Components/testimonials/testimonials.component';
+import { TeamComponent } from './Components/team/team.component';
+import { ContactComponent } from './Components/contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    PopUpreserveComponent
+    PopUpreserveComponent,
+    AboutComponent,
+    ModelsComponent,
+    TestimonialsComponent,
+    TeamComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

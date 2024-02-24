@@ -1,5 +1,5 @@
-
-    <section class="section-1 container" style="margin-top: 400px; margin-bottom: 400px;">
+<a (click)="scrollToTop()" *ngIf="showScrollButton" class="scroll-top-btn" aria-label="Scroll to top" title="Scroll to top">UP</a>
+      <section class="section-1 container" style="margin-top: 200px; margin-bottom: 400px;">
         <div class="container">
             <div class="row">
               <div class="col">
@@ -21,6 +21,8 @@
             </div>
           </div>
     </section>
+
+    
 
     <section class="section-2 container" style="margin-bottom: 200px;">
       
@@ -68,8 +70,12 @@
               </div>
             </div>
             <div class="error-message d-flex justify-content-between align-items-center " *ngIf="showErrorMessage">
-              All fields required!
+              All fields are required!
               <img src="/assets/close.png" width="20px" style="opacity: 60%; cursor: pointer;" (click)="showErrorMessage = false">
+            </div>
+            <div class="reservation-message d-flex justify-content-between align-items-center" *ngIf="showReservationMessage">
+              Check your email to confirm an order.
+              <img src="/assets/check (1).png" width="50px" style="opacity: 60%; cursor: pointer;" (click)="showReservationMessage = false">
             </div>
           </form>
         </div>

@@ -1,0 +1,26 @@
+ul li a {
+    transition: color 0.2s;
+    font-weight: 500;
+}
+ul li a:hover {
+    color: rgb(65, 197, 65);
+}
+.logIn {
+    color: black;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+.logIn:hover {
+    color: rgb(65, 197, 65);
+}
+.registration {
+    background-color: rgb(65, 197, 65); 
+    box-shadow: 5px 10px 10px rgba(56, 187, 56, 0.286); 
+    font-weight: 600; 
+    border-radius: 10px;
+
+    transition: background-color 0.3s;
+}
+.registration:hover {
+    background-color: rgb(63, 187, 63);
+}

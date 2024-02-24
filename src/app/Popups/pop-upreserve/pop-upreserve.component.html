@@ -82,7 +82,8 @@
             </label>
           </div>
         </div>
-        <button class="reserve-btn mt-4 mt-lg-12" type="submit">Reserve</button>
+        <button [mat-dialog-close]="data.reserved == false" class="reserve-btn mt-4 mt-lg-12" type="button">Reserve</button>
+        <button (click)="close()" class="reserve-btn mt-4 mt-lg-12" style="background-color: grey;" type="button">Close</button>
       </form>
     </section>
   </mat-dialog-content>

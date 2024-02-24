@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { MainService } from '../../Services/main.service';
 import { Car } from '../../Interfaces/product';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -16,6 +16,8 @@ export class HomeComponent implements OnInit{
   selectedCar!: Car;
   locations: string[] = ['Tbilisi', 'Batumi', 'Telavi', 'Gori', 'Kutaisi', 'Akhaltsikhe', 'Kobuleti', 'Rustavi'];
   showErrorMessage: boolean = false;
+  showReservationMessage: boolean = false;
+  showScrollButton: boolean = false;
 
   constructor(private main: MainService, private fb: FormBuilder, public dialog: MatDialog) {}
 
@@ -45,19 +47,28 @@ export class HomeComponent implements OnInit{
       this.showErrorMessage = true
     } else {
       this.showErrorMessage = false
+      const dialogref = this.dialog.open(PopUpreserveComponent, {
+        enterAnimationDuration: '500ms',
+        exitAnimationDuration: '500ms',
+        width: '1000px',
+        data: {
+          carData: this.carFormGroup.value,
+          reserved: this.showReservationMessage
+        }
+      });
+      dialogref.afterClosed().subscribe(result => {
+        console.log('The dialog was closed', result);
+        this.showReservationMessage = result
+      });
     }
-  
-    const dialogref = this.dialog.open(PopUpreserveComponent, {
-      // enterAnimationDuration: '500ms',
-      // exitAnimationDuration: '500ms',
-      width: '1000px',
-      data: {
-        carData: this.carFormGroup.value,
-      }
-    });
-    dialogref.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.showScrollButton = window.scrollY > 0;
+  }
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
 }
