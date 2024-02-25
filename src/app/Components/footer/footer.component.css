@@ -1,0 +1,52 @@
+.section-1 img {
+    width: 30px;
+    height: 32px;
+    margin-right: 10px;
+}
+.section-1 .contact-data {
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: color 0.3s;
+}
+ul {
+    padding: 0;
+}
+ul li {
+    list-style-type: none;
+    font-size: 17px;
+    color: grey;
+}
+p {
+    color: grey;
+}
+/*  */
+
+.section-1 input {
+    border: 0;
+    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.189);
+    margin-top: 10px;
+}
+.section-2 input:focus {
+    outline: none;
+}
+.section-1 .reserve-btn {
+    border: none;
+    background-color: rgb(65, 197, 65);
+    color: white;
+    font-weight: 700;
+    font-size: 23px;
+    padding: 7px;
+    border: 2px solid rgb(65, 197, 65);
+    box-shadow: 5px 10px 10px rgba(32, 98, 32, 0.276);
+    max-width: 1000px;
+    width: 100%;
+    margin-top: 30px;
+
+    transition: background-color 0.3s;
+}
+.section-1 .reserve-btn:hover {
+    background-color: rgb(61, 181, 61);
+}
