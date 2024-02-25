@@ -1,0 +1,33 @@
+.cover-img {
+    background-image: url('/assets/Covers/pexels-mike-bird-136872.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+.home-title {
+    color: black;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+.home-title:hover {
+    color: rgb(65, 197, 65);
+}
+
+/* section 2 */
+.section-2 .reserve-btn {
+    border: none;
+    background-color: rgb(65, 197, 65);
+    color: white;
+    font-weight: 700;
+    font-size: 23px;
+    padding: 7px;
+    border: 2px solid rgb(65, 197, 65);
+    box-shadow: 5px 10px 10px rgba(32, 98, 32, 0.276);
+    max-width: 360px;
+    width: 100%;
+
+    transition: background-color 0.3s;
+}
+.section-2 .reserve-btn:hover {
+    background-color: rgb(61, 181, 61);
+}
