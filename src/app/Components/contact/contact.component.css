@@ -1,0 +1,74 @@
+/* section 1 */
+.cover-img {
+    background-image: url('/assets/Covers/pexels-mike-bird-136872.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+.home-title {
+    color: black;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+.home-title:hover {
+    color: rgb(65, 197, 65);
+}
+/* section 2 */
+.section-2 img {
+    width: 30px;
+    height: 32px;
+    margin-right: 10px;
+}
+.section-2 .contact-data {
+    font-size: 20px;
+    font-weight: 600;
+    color: grey;
+    cursor: pointer;
+
+    transition: color 0.3s;
+}
+.section-2 .contact-data:hover {
+    color: rgb(65, 197, 65);
+}
+.section-2 label {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.section-2 input {
+    border: 0;
+    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.189);
+    margin-top: 10px;
+}
+.section-2 input:focus {
+    outline: none;
+}
+.section-2 textarea {
+    border: 0;
+    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.189);
+    margin-top: 10px;
+}
+.section-2 textarea:focus {
+    outline: none;
+}
+
+.section-2 .reserve-btn {
+    border: none;
+    background-color: rgb(65, 197, 65);
+    color: white;
+    font-weight: 700;
+    font-size: 23px;
+    padding: 7px;
+    border: 2px solid rgb(65, 197, 65);
+    box-shadow: 5px 10px 10px rgba(32, 98, 32, 0.276);
+    max-width: 1000px;
+    width: 100%;
+    margin-top: 30px;
+
+    transition: background-color 0.3s;
+}
+.section-2 .reserve-btn:hover {
+    background-color: rgb(61, 181, 61);
+}

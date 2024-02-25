@@ -1,1 +1,49 @@
-<p>contact works!</p>
+<div class="cover-img img-fluid ">
+    <div style="background-color: rgba(255, 255, 255, 0.58); height: 100%; ">
+        <section class="section-1 container text-black" style="padding-top: 100px;">
+            <h1 class="display-5" style="font-weight: 700;">Contact</h1>
+            <h4><span class="home-title" routerLink="/home">Home</span> / Contact</h4>
+        </section>
+    </div>
+</div> 
+
+<section class="section-2" style="margin-top: 100px; margin-bottom: 200px;">
+    <div class="container text-start ">
+        <div class="row">
+          <div class="col">
+            <h1 class="display-4" style="font-weight: 800;">Need additional information?</h1>
+            <p style="font-size: 20px; color: grey; margin-top: 50px;">A multifaceted professional skilled in multiple fields of research, development as well as a learning specialist. Over 15 years of experience.</p>
+            <div class="d-flex justify-content-start">
+                <img src="/assets/contact/phone-call.png" alt="call image">
+                <p class="contact-data">(+123)-456-4778</p>
+            </div>
+            <div class="d-flex justify-content-start">
+                <img src="/assets/contact/email.png" alt="email image">
+                <p class="contact-data">rentcar&#64;carmail.com</p>
+            </div>
+            <div class="d-flex justify-content-start">
+                <img src="/assets/contact/location.png" alt="location image">
+                <p class="contact-data">Tbilisi, Georgia</p>
+            </div>
+          </div>
+          <div class="col text-center">
+            <div class="text-start">
+                <div class="text-start d-flex flex-column">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="E. g. 'Lasha Tsik'">
+                </div>
+                <div class="text-start d-flex flex-column">
+                    <label for="Email">Email</label>
+                    <input type="email" id="Email" placeholder="1234@mail.com">
+                </div >
+                <div class="text-start d-flex flex-column">
+                    <label for="clienttext">Tell Us About It</label>
+                    <textarea type="text" id="clienttext" placeholder="Write Here..."></textarea>
+                </div>
+                <button class="reserve-btn" type="submit" routerLink="/home">Book Ride</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+</section>
