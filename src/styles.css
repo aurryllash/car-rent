@@ -6,3 +6,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+* {
+    scrollbar-width:thin;
+    scrollbar-color: rgb(65, 197, 65) #f1f1f1; 
+}
+body {
+    overflow-y: scroll;
+}
