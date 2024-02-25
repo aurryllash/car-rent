@@ -1,0 +1,22 @@
+/* section 1 */
+.cover-img {
+    background-image: url('/assets/Covers/pexels-mike-bird-136872.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+.home-title {
+    color: black;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+.home-title:hover {
+    color: rgb(65, 197, 65);
+}
+/* section 2 */
+.section-2 .box {
+    background-color: white;
+    padding: 40px 20px;
+    box-shadow: 7px 10px 10px rgba(128, 128, 128, 0.086);
+    height: 40rem;
+}
