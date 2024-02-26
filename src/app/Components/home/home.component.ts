@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit{
   showReservationMessage: boolean = false;
   showScrollButton: boolean = false;
 
-  constructor(private main: MainService, private fb: FormBuilder, public dialog: MatDialog) {}
+  constructor(private main: MainService, private fb: FormBuilder, public dialog: MatDialog) { }
 
   carFormGroup: FormGroup = this.fb.group({
     carType: ['', Validators.required],
@@ -34,6 +34,8 @@ export class HomeComponent implements OnInit{
       this.cars = response
     })
     this.selectedCar = this.cars[0]
+
+    
   }
 
   selectCar(car: Car) {
