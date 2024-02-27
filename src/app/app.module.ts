@@ -15,6 +15,9 @@ import { TestimonialsComponent } from './Components/testimonials/testimonials.co
 import { TeamComponent } from './Components/team/team.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { FooterComponent } from './Components/footer/footer.component';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,13 @@ import { FooterComponent } from './Components/footer/footer.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    StoreModule.forRoot([]),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: environment.production,
+      autoPause: true
+    })
   ],
   providers: [
     provideClientHydration()

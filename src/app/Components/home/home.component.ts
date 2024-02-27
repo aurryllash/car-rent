@@ -14,12 +14,15 @@ export class HomeComponent implements OnInit{
 
   cars: Car[] = [];
   selectedCar!: Car;
+  N!: Car;
   locations: string[] = ['Tbilisi', 'Batumi', 'Telavi', 'Gori', 'Kutaisi', 'Akhaltsikhe', 'Kobuleti', 'Rustavi'];
   showErrorMessage: boolean = false;
   showReservationMessage: boolean = false;
   showScrollButton: boolean = false;
 
-  constructor(private main: MainService, private fb: FormBuilder, public dialog: MatDialog) { }
+  constructor(private main: MainService, private fb: FormBuilder, public dialog: MatDialog) {
+    
+   }
 
   carFormGroup: FormGroup = this.fb.group({
     carType: ['', Validators.required],
@@ -32,9 +35,8 @@ export class HomeComponent implements OnInit{
   ngOnInit(): void {
     this.main.getAllCar().subscribe(response => {
       this.cars = response
+      this.selectedCar = this.cars[0]
     })
-    this.selectedCar = this.cars[0]
-
     
   }
 
