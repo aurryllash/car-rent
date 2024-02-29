@@ -15,9 +15,6 @@ import { TestimonialsComponent } from './Components/testimonials/testimonials.co
 import { TeamComponent } from './Components/team/team.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { FooterComponent } from './Components/footer/footer.component';
-import { StoreModule } from '@ngrx/store';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
