@@ -124,7 +124,7 @@
     font-weight: 700;
     margin-top: 15px;
 }
-.section-3 p {
+.section-3 .paragraph {
     font-weight: 700;
     color: grey;
     margin-top: 15px;
@@ -150,9 +150,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-.section-4 p {
-    max-width: 450px;
 }
 .section-4 .container-4 {
 

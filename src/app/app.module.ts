@@ -37,13 +37,7 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    MatDialogModule,
-    StoreModule.forRoot([]),
-    StoreDevtoolsModule.instrument({
-      maxAge: 25,
-      logOnly: environment.production,
-      autoPause: true
-    })
+    MatDialogModule
   ],
   providers: [
     provideClientHydration()
